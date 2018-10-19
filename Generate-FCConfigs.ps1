@@ -556,27 +556,27 @@ foreach ($Sheet in $Sheets) {
 if ($SwitchType -eq "Brocade") { 
 
     if ($OutputType -eq "Config") {
-        New-BrocadeAliasConfig -FChosts $FCDataHosts -FCArray $FCDataArray -Side A | out-file -FilePath "Brocade FC Alias Config A.txt"
-        New-BrocadeAliasConfig -FChosts $FCDataHosts -FCArray $FCDataArray -Side B | out-file -FilePath "Brocade FC Alias Config B.txt"
+        New-BrocadeAliasConfig -FChosts $FCDataHosts -FCArray $FCDataArray -Side A | out-file -FilePath "Output\Brocade FC Alias Config A.txt"
+        New-BrocadeAliasConfig -FChosts $FCDataHosts -FCArray $FCDataArray -Side B | out-file -FilePath "Output\Brocade FC Alias Config B.txt"
 
-        New-BrocadeZoneConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side A | out-file -FilePath "Brocade FC Zone Config A.txt"
-        New-BrocadeZoneConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side B | out-file -FilePath "Brocade FC Zone Config B.txt"
+        New-BrocadeZoneConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side A | out-file -FilePath "Output\Brocade FC Zone Config A.txt"
+        New-BrocadeZoneConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side B | out-file -FilePath "Output\Brocade FC Zone Config B.txt"
 
-        New-BrocadeZoneSetConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -Side A | Out-File -FilePath "Brocade FC Zone Set Config A.txt"
-        New-BrocadeZoneSetConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -Side B | Out-File -FilePath "Brocade FC Zone Set Config B.txt"
+        New-BrocadeZoneSetConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -Side A | Out-File -FilePath "Output\Brocade FC Zone Set Config A.txt"
+        New-BrocadeZoneSetConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -Side B | Out-File -FilePath "Output\Brocade FC Zone Set Config B.txt"
 
 
     }
     else {
 
-        New-BrocadeAliasReference -FChosts $FCDataHosts -FCArray $FCDataArray -Side A | out-file -FilePath "Brocade FC Alias Reference A.txt"
-        New-BrocadeAliasReference -FChosts $FCDataHosts -FCArray $FCDataArray -Side B | out-file -FilePath "Brocade FC Alias Reference B.txt"
+        New-BrocadeAliasReference -FChosts $FCDataHosts -FCArray $FCDataArray -Side A | out-file -FilePath "Output\Brocade FC Alias Reference A.txt"
+        New-BrocadeAliasReference -FChosts $FCDataHosts -FCArray $FCDataArray -Side B | out-file -FilePath "Output\Brocade FC Alias Reference B.txt"
     
-        New-BrocadeZoneReference -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side A | out-file -FilePath "Brocade FC Zone Reference A.txt"
-        New-BrocadeZoneReference -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side B | out-file -FilePath "Brocade FC Zone Reference B.txt"
+        New-BrocadeZoneReference -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side A | out-file -FilePath "Output\Brocade FC Zone Reference A.txt"
+        New-BrocadeZoneReference -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side B | out-file -FilePath "Output\Brocade FC Zone Reference B.txt"
     
-        New-BrocadeZoneSetReference -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -Side A | Out-File -FilePath "Brocade FC Zone Set Reference A.txt"
-        New-BrocadeZoneSetReference -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -Side B | Out-File -FilePath "Brocade FC Zone Set Reference B.txt"
+        New-BrocadeZoneSetReference -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -Side A | Out-File -FilePath "Output\Brocade FC Zone Set Reference A.txt"
+        New-BrocadeZoneSetReference -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -Side B | Out-File -FilePath "Output\Brocade FC Zone Set Reference B.txt"
 
     }
 
@@ -585,14 +585,14 @@ else {
 
     if ($OutputType -eq "Config") {
 
-        New-CiscoAliasConfig -FChosts $FCDataHosts -FCArray $FCDataArray -Side A | out-file -FilePath "Cisco FC Alias Config A.txt"
-        New-CiscoAliasConfig -FChosts $FCDataHosts -FCArray $FCDataArray -Side B | out-file -FilePath "Cisco FC Alias Config B.txt"
+        New-CiscoAliasConfig -FChosts $FCDataHosts -FCArray $FCDataArray -Side A | out-file -FilePath "Output\Cisco FC Alias Config A.txt"
+        New-CiscoAliasConfig -FChosts $FCDataHosts -FCArray $FCDataArray -Side B | out-file -FilePath "Output\Cisco FC Alias Config B.txt"
 
-        New-CiscoZoneConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side A -VSAN $FCdataVSAN | out-file -FilePath "Cisco FC Zone Config A.txt"
-        New-CiscoZoneConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side B -VSAN $FCdataVSAN | out-file -FilePath "Cisco FC Zone Config B.txt"
+        New-CiscoZoneConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side A -VSAN $FCdataVSAN | out-file -FilePath "Output\Cisco FC Zone Config A.txt"
+        New-CiscoZoneConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -Side B -VSAN $FCdataVSAN | out-file -FilePath "Output\Cisco FC Zone Config B.txt"
 
-        New-CiscoZoneSetConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -VSAN $FCdataVSAN -Side A | Out-File -FilePath "Cisco FC Zone Set Config A.txt"
-        New-CiscoZoneSetConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -VSAN $FCdataVSAN -Side B | Out-File -FilePath "Cisco FC Zone Set Config B.txt"
+        New-CiscoZoneSetConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -VSAN $FCdataVSAN -Side A | Out-File -FilePath "Output\Cisco FC Zone Set Config A.txt"
+        New-CiscoZoneSetConfig -FChosts $FCDataHosts -FCArray $FCDataArray -TargetType $TargetType -ZoneSet $FCDataZoneSet -VSAN $FCdataVSAN -Side B | Out-File -FilePath "Output\Cisco FC Zone Set Config B.txt"
 
     }
     else {
