@@ -10,15 +10,23 @@ This script will take a Excel file that lists the specified Hosts, Array, Zonese
 This script is opinionated in laying out the names of the aliases and zones, but the functions can be changed to suit your naming standards. 
 
 There are some assumptions and requirements with this script. 
+
 ImportExcel Module is installed. https://github.com/dfinke/ImportExcel
+
 Fabrics are fully redundant and isolated
+
 All hosts and arrays are dual attached
+
 Zone names contain the host, the side, and the array port
+
 All hosts connect to all array ports on their respective sides
+
 Using Brocade or Cisco Switches
 
 There are features that are still not in the script yet. 
+
 Cisco reference configs
+
 Multi target
 
 
